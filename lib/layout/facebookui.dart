@@ -55,8 +55,8 @@ class facebookui extends StatelessWidget {
                   )),
               Spacer(),
               Row(
-                children: [
-                  const Text(
+                children: const [
+                  Text(
                     'See Archive',
                     style: TextStyle(
                       color: Colors.grey,
@@ -67,7 +67,7 @@ class facebookui extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             width: 9,
           ),
           Container(
