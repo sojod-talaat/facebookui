@@ -1,13 +1,10 @@
 class Post {
-  String? Content;
+  String? content;
   String? image;
-  int? nolikes;
+  int? noLikes;
   Post.forMap(Map<String, dynamic> data) {
-    Content:
-    data['Content'];
-    image:
-    data['image'];
-    nolikes:
-    data['nolikes'];
+    content = data['content'];
+    image = data['image'];
+    noLikes = data['nolikes'];
   }
 }

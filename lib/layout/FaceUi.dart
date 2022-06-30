@@ -5,16 +5,17 @@ import 'package:gsg/model/user.dart';
 import '../model/post.dart';
 
 class Ui extends StatelessWidget {
-  late User user;
-  late Post post;
-  Ui(this.user, this.post);
+  User user;
+  Post post;
+
+  Ui(this.user, this.post, {Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(children: [
       Row(
         children: [
           CircleAvatar(
-            backgroundImage: NetworkImage(user.image ?? ''),
+            backgroundImage: NetworkImage(user.image ?? ""),
             radius: 15,
           ),
           const SizedBox(
@@ -22,7 +23,7 @@ class Ui extends StatelessWidget {
           ),
           //SizedBox(width: 10),
           Text(
-            user.name ?? '',
+            user.name ?? 'test',
             style: TextStyle(
               color: Colors.black,
               fontSize: 16,
@@ -61,10 +62,8 @@ class Ui extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(19),
-            image: const DecorationImage(
-              image: AssetImage(
-                "images/download.jpg",
-              ),
+            image: DecorationImage(
+              image: NetworkImage(post.image ?? ''),
               fit: BoxFit.cover,
             ),
           )),
@@ -88,7 +87,7 @@ class Ui extends StatelessWidget {
           ),
           Text('400 '),
           Spacer(),
-          Text('122 comment')
+          Text('122 comment '),
         ],
       ),
       Divider(),
