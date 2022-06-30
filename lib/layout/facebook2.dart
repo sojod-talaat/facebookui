@@ -116,49 +116,37 @@ class feace extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
-            Container(
-              margin: EdgeInsets.only(left: 14),
-              child: Row(
-                children: [
-                  Image.asset(
-                    'images/like2.png',
-                    width: 23,
-                    height: 23,
-                  ),
-                  SizedBox(
-                    width: 14,
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      height: 40,
-                      child: TextField(
-                          decoration: InputDecoration(
-                        suffixIcon: Icon(Icons.face_outlined),
-                        hintText: "Add comment ",
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(13),
-                        ),
-                      )),
+            Expanded(
+              child: Container(
+                margin: EdgeInsets.only(left: 14),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'images/like2.png',
+                      width: 23,
+                      height: 23,
                     ),
-                  ),
-                  SizedBox(
-                    width: 12,
-                  )
-                  // Container(
-                  //   decoration:
-                  //       BoxDecoration(borderRadius: BorderRadius.circular(13)),
-                  //   child: Row(
-                  //     children: const [
-                  //       Text('Add comment'),
-                  //       Spacer(),
-                  //       CircleAvatar(
-                  //         backgroundImage: AssetImage('images/download.jpg'),
-                  //         radius: 3,
-                  //       )
-                  //     ],
-                  //   ),
-                  // )
-                ],
+                    SizedBox(
+                      width: 14,
+                    ),
+                    Expanded(
+                      child: SizedBox(
+                        height: 40,
+                        child: TextField(
+                            decoration: InputDecoration(
+                          suffixIcon: Icon(Icons.face_outlined),
+                          hintText: "Add comment ",
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(13),
+                          ),
+                        )),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 12,
+                    )
+                  ],
+                ),
               ),
             ),
           ],

@@ -1,6 +1,11 @@
 import 'package:flutter/cupertino.dart';
 
+import '../model/post.dart';
+import '../model/user.dart';
+
 class story extends StatelessWidget {
+  User? user;
+  story(this.user, {Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,9 +15,7 @@ class story extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
-            image: AssetImage(
-              "images/download.jpg",
-            ),
+            image: NetworkImage(user?.image ?? ""),
             fit: BoxFit.cover,
           ),
         ));
