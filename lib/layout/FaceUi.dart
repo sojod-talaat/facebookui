@@ -7,6 +7,7 @@ import '../model/post.dart';
 class Ui extends StatelessWidget {
   User user;
   Post post;
+  String? name;
 
   Ui(this.user, this.post, {Key? key}) : super(key: key);
   @override
